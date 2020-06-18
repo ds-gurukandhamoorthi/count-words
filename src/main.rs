@@ -1,11 +1,11 @@
 use std::env;
 use std::fs::File;
 use std::io::{BufReader, BufRead, Error};
-use std::collections::HashMap;
+use fnv::{FnvHashMap};
 
 fn main() -> Result<(), Error> {
     let files  = env::args().skip(1);
-    let mut words_count = HashMap::new();
+    let mut words_count = FnvHashMap::default();
 
     for filename in files {
 
