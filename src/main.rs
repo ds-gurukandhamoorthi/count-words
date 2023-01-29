@@ -21,10 +21,10 @@ fn main() -> Result<(), Error> {
         }
 
     }
-    println!("{},{}", "word", "count");
+    println!("word,count");
     for (word, count) in words_count {
         if !word.is_empty() {
-            println!("{},{}", word, count);
+            println!("{word},{count}");
         }
     }
 
